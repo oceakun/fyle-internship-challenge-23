@@ -1,43 +1,29 @@
 # Fyle Frontend Challenge
 
-## Who is this for?
+As per the 'Fyle Frontend Challenge', this Angular application is designed to retrieve a user's public repositories from GitHub using the GitHub API. It provides an easy-to-use interface where users can input a GitHub username, and the application fetches and displays all the public repositories associated with that username. The project utilizes Angular framework and Tailwind CSS for a responsive and user-friendly design.
 
-This challenge is meant for candidates who wish to intern at Fyle and work with our engineering team. The candidate should be able to commit to at least 6 months of dedicated time for internship.
+## Features
 
-## Why work at Fyle?
+- **User-friendly Interface:** A simple and intuitive user interface for entering a GitHub username.
+- **GitHub API Integration:** Utilizes GitHub API to fetch and display all the public repositories of the provided username, along with the user's data, such as, location, twitter handle, bio etc.
+- **Server-side Pagination:** Allows easy navigation through multiple repositories using pagination.
+- **Responsive Design:** Ensures a smooth and adaptable user experience on various devices.
 
-Fyle is a fast-growing Expense Management SaaS product. We are ~40 strong engineering team at the moment. 
+## Usage
+Find the deployed version at `https://654a42ff71ad24305eea15ec--golden-custard-8a760d.netlify.app/`
+1. **Enter GitHub Username:** Enter the GitHub username of the user whose public repositories you want to view.
+2. **View Repositories:** Once a username is entered, the application will display the user's public repositories with pagination for easy navigation.
 
-We are an extremely transparent organization. Check out our [careers page](https://careers.fylehq.com) that will give you a glimpse of what it is like to work at Fyle. Also, check out our Glassdoor reviews [here](https://www.glassdoor.co.in/Reviews/Fyle-Reviews-E1723235.htm). You can read stories from our teammates [here](https://stories.fylehq.com).
+## Technologies Used
 
-## Challenge outline
+- Angular (v16.1.0)
+- TailwindCSS (v3.3.5)
+- GitHub API
 
-This challenge involves implementing application using github api. 
+## Local setup
 
-The services that you need to use are already implemented - check out ApiService.
-
-You can see details of this challenge [here](https://fyleuniverse.notion.site/fyleuniverse/Fyle-Frontend-development-challenge-cb5085e5e0864e769e7b98c694400aaa)
-
-__Note__ - This challenge is in angular. We work on angular frameworks & after you join we expect the same from you. Hence it is required to complete this assignement in angular itself.
-
-## What happens next?
-
-You will hear back within 48 hours from us via email.
-
-## Installation
-
-1. Fork this repository to your github account.
-2. Clone the forked repository and proceed with steps mentioned below.
-
-### Install requirements
-* Install angular cli [Ref](https://angular.io/cli)
-* `npm install` in this repository 
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Further help
-
-Visit the [Angular Documentation](https://angular.io/guide/styleguide) to learn more.
-Styling is to be strictly done with [Tailwind](https://tailwindcss.com/docs/installation).
+1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+2. Navigate to the project directory: `cd your-repo`
+3. Install dependencies: `npm install`
+4. Start the development server: `ng serve`
+5. Open a web browser and go to `http://localhost:4200/`
