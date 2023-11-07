@@ -1,5 +1,13 @@
-<div class="grid h-screen place-items-center">
-  <div class="font-bold text-3xl">
-    Fyle Internship Challenge
+  <div class="flex flex-row justify-center w-full my-14 mt-4">
+    <form [formGroup]="usernameForm" (ngSubmit)="onSubmit()">
+    <div class="flex flex-row gap-4">
+      <input class="border-[1px] border-blue-200 p-2 rounded w-[220px]" id="username" placeholder="enter username" type="text" formControlName="username">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+      Get repos</button>
+    </div>
+  </form>
   </div>
-</div>
+  <app-messages *ngIf="showMsg && !showBioLoader && !showReposLoader && !showContent" [msgVal]="msgVal"></app-messages>
+  <app-bio-loader *ngIf="showBioLoader && !showMsg && !showContent" class="flex flex-col justify-center "></app-bio-loader>
+  <app-repos-loader *ngIf=" showReposLoader && !showMsg && !showContent" class="flex flex-col justify-center "></app-repos-loader>
+  <app-main *ngIf="!showMsg && showContent && !showBioLoader && !showReposLoader" class="flex flex-col justify-center w-full " [repos]="repos" [user]="user" [pageNumber]="pageNumber" (onPageNumberChange)="onPageNumberChange($event)"></app-main>
