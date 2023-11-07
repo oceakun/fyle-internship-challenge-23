@@ -1,23 +1,25 @@
-<div class="flex flex-row items-center justify-center gap-4 mb-4">
-      <img class="border-[1px] border-black p-[2px] relative rounded-full avatar" src={{user.avatar_url}} alt="person"/>
-</div>
-<fieldset class=" items-start border-[1px] border-black p-4 gap-2 rounded w-[300]">
-    <legend class="block mx-auto w-auto text-center">{{ user.login }}</legend>
-    <p class="text-[#b074e8] italic">{{ user.bio }}</p>
-    <div class="flex flex-row gap-2 -ml-[3px]">
-      <img src="../../../assets/location.svg" alt="location"/>
-      <span *ngIf="displayLocation; else showThis">{{ user.location }}</span>
-    </div>
-    <div class="flex flex-row gap-2">
-      <img src="../../../assets/x.svg" alt="x"/>
-      <span *ngIf="displayTwitter; else showThis">{{ user.twitter }}</span>
-    </div>
-    <div class="flex flex-row gap-2">
-      <img src="../../../assets/link.svg" alt="link"/>
-      <a class="text-blue-400" target="_blank" href={{user.html_url}}>{{user.html_url}}</a>
+<div class="lg:flex flex-row justify-center items-start gap-4">
+  <div class="flex flex-row items-center justify-center gap-4 mb-4">
+        <img class="border-[1px] border-black p-[2px] relative rounded-full avatar " src={{user.avatar_url}} alt="person"/>
   </div>
-</fieldset>
+  <fieldset class="border-[1px] border-black p-4 rounded mx-14 max-w-[500px]">
+      <legend class="block mx-auto w-auto text-center">{{ user.login }}</legend>
+      <p class="text-[#06c992] italic">{{user.bio}}</p>
+      <div class="flex flex-row gap-2 -ml-[3px] mt-4">
+        <img src="../../../assets/location.svg" alt="location"/>
+        <span *ngIf="displayLocation; else showThis">{{ user.location }}</span>
+      </div>
+      <div class="flex flex-row gap-[12px] ml-[2px] mt-4">
+        <img src="../../../assets/x.svg" alt="x"/>
+        <span *ngIf="displayTwitter; else showThis">{{ user.twitter }}</span>
+      </div>
+      <div class="flex flex-row gap-2 mt-4">
+        <img src="../../../assets/link.svg" alt="link"/>
+        <a class="text-[#06c992] hover:underline" target="_blank" href={{user.html_url}}>{{user.html_url}}</a>
+    </div>
+  </fieldset>
+</div>
 
 <ng-template #showThis>      
-  <span>---</span>
+  <span class="text-[#06c992]">---</span>
 </ng-template>
