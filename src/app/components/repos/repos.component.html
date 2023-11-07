@@ -1,0 +1,23 @@
+<div class="flex flex-row flex-wrap gap-20 justify-center items-start ">
+    <div *ngFor="let item of repos">
+      <div class="border-[1px] border-[#fcf5f7] p-4 rounded sm:w-[500px] w-[340px] min-h-[150px] shadow-[rgba(7,_65,_210,_0.1)_0px_9px_20px] hover:shadow-[rgba(7,_65,_210,_0.1)_0px_9px_60px] hover:cursor-pointer" >
+        <div class="flex flex-row justify-between">
+          <a href={{item.html_url}} target="_black" class="decoration-1 decoration-blue-600 text-blue-600  text-[18px]">{{ item.name }}</a>
+          <div class="flex flex-row justify-start items-center">
+          <img src="../../../assets/star.svg" alt="star"/>
+          <span class="text-yellow-500 text-right">{{ item.stargazers_count }}</span>
+          </div>
+        </div>
+        <p class="font-extralight py-2 text-[14px]">{{ item.description }}</p>
+        <div class="flex flex-row flex-wrap gap-2 " >
+          <div *ngFor="let topic of item.topics ">
+          <span class="border-[1px] bg-[#f7fffc] border-[#0ced8c] text-[#0ced8c]  p-[2px] text-[14px] rounded"> {{ topic }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<ng-template #NullEl>      
+  <span>---</span>
+</ng-template>
