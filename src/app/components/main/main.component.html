@@ -1,0 +1,7 @@
+<div class="flex flex-col justify-center items-center gap-14">
+    <app-bio [user]="user" ></app-bio>
+    <div class="flex flex-row justify-center items-center pb-20">
+        <app-repos [repos]="repos" ></app-repos>
+        <app-paginator [pageNumber]="pageNumber" (passNumber)="passNumber($event)"></app-paginator>
+    </div>
+</div>
